@@ -138,7 +138,6 @@ class { 'accounts':
           :comment        => 'Matt M.',
           :groups         => [],
           :home           => '/home/matt',
-          :managehome     => true,
           :uid            => 1009,
         })}
         it { is_expected.to have_ssh_authorized_key_resource_count(1) }
@@ -179,7 +178,6 @@ class { 'accounts':
           :comment        => 'Luke K.',
           :groups         => [],
           :home           => '/home/luke',
-          :managehome     => true,
           :uid            => 1000,
         })}
         it { is_expected.to have_ssh_authorized_key_resource_count(2) }
@@ -263,7 +261,6 @@ class { 'accounts':
           :comment        => 'Luke K.',
           :groups         => [],
           :home           => '/home/luke',
-          :managehome     => true,
           :uid            => 1000,
         })}
         it { is_expected.to contain_user('nigel').with({
@@ -272,7 +269,6 @@ class { 'accounts':
           :comment        => 'Nigel K.',
           :groups         => [],
           :home           => '/home/nigel',
-          :managehome     => true,
           :uid            => 1001,
         })}
         it { is_expected.to contain_user('bill').with({
@@ -281,7 +277,6 @@ class { 'accounts':
           :comment        => 'Bill K.',
           :groups         => [],
           :home           => '/home/bill',
-          :managehome     => true,
           :uid            => 1002,
         })}
         it { is_expected.to have_ssh_authorized_key_resource_count(6) }
